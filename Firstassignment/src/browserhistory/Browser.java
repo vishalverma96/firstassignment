@@ -23,11 +23,17 @@ public class Browser {
 
 			System.out.println("History is Empty: " +isBrowsingHistoryEmpty());
 			break;
+		case 2:
+			
+			System.out.println("Most Recent call is: "+mostRecentlyVisitedSite());
+		
+			break;
 		default:
 			System.out.println("Please Choose a Correct Option");
 			display();
 
 		}
+		
 		
 		
 		
@@ -40,6 +46,16 @@ public class Browser {
 		}
 		else {
 			return false;
+		}
+	}
+	
+public static String mostRecentlyVisitedSite() {
+		
+		if(history.isEmpty()== true) {
+			return "History is Empty";
+		}
+		else {
+			return history.peek();
 		}
 	}
 
