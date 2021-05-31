@@ -39,6 +39,19 @@ public class Browser {
 			}
 			
 			break;
+		case 4:
+
+			System.out.println("Total last Visited Websites:"+history.size());
+			System.out.print("How much last Sites You Want to Delete: ");
+			int del = s.nextInt();
+			if(history.size() > del) {
+				goBackInTime(del);
+			}
+			else {
+	    	System.out.println("You Enter a Wrong Inputs");
+			}
+		
+			break;
 		default:
 			System.out.println("Please Choose a Correct Option");
 			display();
@@ -74,6 +87,18 @@ public static String mostRecentlyVisitedSite() {
 	public static void addSiteToHistory(String url) {
 	history.push(url);
 }
+	
+	public static void goBackInTime(int n) {
+		if(history.isEmpty()) {
+			System.out.println("History is Empty");
+		}
+		else {
+	      while(n>0){
+	        history.pop();
+	        n--;
+	      }
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
