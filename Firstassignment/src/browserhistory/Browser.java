@@ -17,9 +17,30 @@ public class Browser {
 		
 		System.out.print("Enter Your choice: ");
 		int choice = s.nextInt();
+		switch(choice){
+		
+		case 1:
+
+			System.out.println("History is Empty: " +isBrowsingHistoryEmpty());
+			break;
+		default:
+			System.out.println("Please Choose a Correct Option");
+			display();
+
+		}
 		
 		
 		
+	}
+	// Check History is Empty or not
+	public static Boolean isBrowsingHistoryEmpty() {
+	    
+		if(history.size()==0) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public static void main(String[] args) {
