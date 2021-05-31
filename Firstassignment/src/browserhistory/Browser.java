@@ -22,10 +22,12 @@ public class Browser {
 		case 1:
 
 			System.out.println("History is Empty: " +isBrowsingHistoryEmpty());
+			choose();
 			break;
 		case 2:
 			
 			System.out.println("Most Recent call is: "+mostRecentlyVisitedSite());
+			choose();
 		
 			break;
 		case 3:
@@ -37,7 +39,7 @@ public class Browser {
 	    	String url = s.next();
 	    	addSiteToHistory(url);
 			}
-			
+			choose();
 			break;
 		case 4:
 
@@ -50,22 +52,44 @@ public class Browser {
 			else {
 	    	System.out.println("You Enter a Wrong Inputs");
 			}
+			choose();
 		
 			break;
 		case 5:
 
 			printBrowsingHistory();
-			
+			choose();
 			break;
+		case 6:
+			
+			System.exit(0);
+
 		default:
 			System.out.println("Please Choose a Correct Option");
 			display();
 
+		
 		}
 		
 		
 		
 		
+	}
+	
+	static void choose() {
+		System.out.print("Do you Want to Choose another Operation y/n: ");
+			char ch = s.next().charAt(0);
+//			String c = s.next();
+//			char ch = c.charAt(0);
+			if (ch == 'y' || ch == 'Y') {
+			
+				display();
+			}
+
+			else {
+			
+				System.out.println("Thankyou for using the program");
+			}
 	}
 	// Check History is Empty or not
 	public static Boolean isBrowsingHistoryEmpty() {
