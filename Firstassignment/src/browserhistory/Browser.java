@@ -28,6 +28,17 @@ public class Browser {
 			System.out.println("Most Recent call is: "+mostRecentlyVisitedSite());
 		
 			break;
+		case 3:
+
+			System.out.print("How much Sites you Want to add: ");
+			int site = s.nextInt();
+			for(int i = 0; i < site; i++) {
+	    	System.out.print("Enter "+(i+1)+" site name: ");
+	    	String url = s.next();
+	    	addSiteToHistory(url);
+			}
+			
+			break;
 		default:
 			System.out.println("Please Choose a Correct Option");
 			display();
@@ -58,6 +69,11 @@ public static String mostRecentlyVisitedSite() {
 			return history.peek();
 		}
 	}
+
+	//Push Element
+	public static void addSiteToHistory(String url) {
+	history.push(url);
+}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
