@@ -52,6 +52,11 @@ public class Browser {
 			}
 		
 			break;
+		case 5:
+
+			printBrowsingHistory();
+			
+			break;
 		default:
 			System.out.println("Please Choose a Correct Option");
 			display();
@@ -99,6 +104,11 @@ public static String mostRecentlyVisitedSite() {
 	      }
 		}
 	}
+	//this is for print
+	public static void printBrowsingHistory() {
+		
+		System.out.println(history);
+}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
